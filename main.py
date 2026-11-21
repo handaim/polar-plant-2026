@@ -165,16 +165,25 @@ def bar_compare_fig(labels, top_vals, bot_vals, title, color_top="#2E86AB", colo
 # ──────────────────────────────────────────────
 # 한글 폰트 + wide mode
 # ──────────────────────────────────────────────
-st.set_page_config(page_icon="🌱", layout="wide")
-st.markdown(
-    """<style>
-    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
-    html, body, [class*="css"] {
-        font-family: 'Noto Sans KR', 'Malgun Gothic', sans-serif;
-    }
-    </style>""",
-    unsafe_allow_html=True,
+st.set_page_config(
+    page_icon="🌱",
+    layout="wide",
+    theme={
+        "primaryColor":      "#2E86AB",   # ← 버튼·지표 델타·그래프 강조색
+        "backgroundColor":   "#FAFBFD",   # ← 전체 배경
+        "secondaryBackgroundColor": "#EEF3F8",  # ← 카드·사이드바 배경
+        "textColor":         "#1A2332",   # ← 본문 텍스트
+        "font":              "Noto Sans KR",
+    },
 )
+/* 제목 그라데이션 */
+background: linear-gradient(90deg, #2E86AB 0%, #5DB8C4 50%, #A2D5DA 100%);
+/* 서브헤더 왼쪽 구분선 */
+border-left: 4px solid #2E86AB;
+/* metric 카드 그림자 */
+box-shadow: 0 1px 4px rgba(46,134,171,0.10);
+/* 다운로드 버튼 배경 */
+button[kind="secondary"] { background: #2E86AB !important; }
 
 # ──────────────────────────────────────────────
 # 사이드바
