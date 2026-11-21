@@ -114,7 +114,7 @@ html, body, [class*="css"] {
     unsafe_allow_html=True,
 )
 
-st.title("🌱 우리 학교 극지식물 개체별 생육 차이 분석")
+st.title("🌱 인천여고 극지식물 개체별 생육 차이 분석")
 
 env_file = st.sidebar.file_uploader("🌡️ 환경 데이터 CSV", type="csv")
 growth_file = st.sidebar.file_uploader("🌱 생육 결과 CSV", type="csv")
